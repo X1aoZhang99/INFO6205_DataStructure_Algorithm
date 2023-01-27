@@ -62,24 +62,29 @@ def basicGaleShapley(menPref, womenPref):
     # The set stores unmatched men and the dictionary stores temporary spouse of women
     unmatchedMan = set()
     spouseOfWoman = dict()
-    for key in menPref.keys():
-        unmatchedMan.add(key)
-    for key in womenPref.keys():
-        spouseOfWoman[key] = None
+    for i in range(len(menPref)):
+        unmatchedMan.add(i)
+        spouseOfWoman[i] = None
+
     while unmatchedMan:
+        # Pop a unmatchedman to propose
         proposeMan = unmatchedMan.pop()
+
         # If error happen
         if not menPref[proposeMan]:
             return dict()
 
-        newManPref = menPref[proposeMan]
-        proposedWoman = newManPref.pop(0)
-        menPref[proposeMan] = newManPref
+        # Prepared to proposed to his top rated woman
+        proposedWoman = menPref[proposeMan].pop(0)
+
+        # She is unmatched
         if spouseOfWoman[proposedWoman] is None:
             spouseOfWoman[proposedWoman] = proposeMan
+        # This man is her better choice
         elif womenPref[proposedWoman].index(spouseOfWoman[proposedWoman]) > womenPref[proposedWoman].index(proposeMan):
             unmatchedMan.add(spouseOfWoman[proposedWoman])
             spouseOfWoman[proposedWoman] = proposeMan
+        # Rejected
         else:
             unmatchedMan.add(proposeMan)
 

@@ -48,17 +48,24 @@ def basicGaleShapley(menPref, womenPref):
         spouseOfWoman[i] = None
 
     while unmatchedMan:
+        # Pop a unmatchedman to propose
         proposeMan = unmatchedMan.pop()
+
         # If error happen
         if not menPref[proposeMan]:
             return dict()
 
+        # Prepared to proposed to his top rated woman
         proposedWoman = menPref[proposeMan].pop(0)
+
+        # She is unmatched
         if spouseOfWoman[proposedWoman] is None:
             spouseOfWoman[proposedWoman] = proposeMan
+        # This man is her better choice
         elif womenPref[proposedWoman].index(spouseOfWoman[proposedWoman]) > womenPref[proposedWoman].index(proposeMan):
             unmatchedMan.add(spouseOfWoman[proposedWoman])
             spouseOfWoman[proposedWoman] = proposeMan
+        # Rejected
         else:
             unmatchedMan.add(proposeMan)
 
