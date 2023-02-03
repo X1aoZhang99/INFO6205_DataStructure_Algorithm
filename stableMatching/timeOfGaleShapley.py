@@ -5,7 +5,7 @@ import random
 def main(args):
     num = args.size
 
-    for i in range(13):
+    for i in range(12):
 
         # initialize the preferences of men and women, depending on if the user choose the worstcase option
         menPref = []

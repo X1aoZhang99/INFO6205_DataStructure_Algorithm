@@ -27,7 +27,7 @@ def main(args):
         womanPref = womenPrefList.pop()
         menPref[i] = manPref
         womenPref[i + num] = womanPref
-    
+
     result = basicGaleShapley(menPref, womenPref)
     print(result)
 
@@ -62,9 +62,11 @@ def basicGaleShapley(menPref, womenPref):
     # The set stores unmatched men and the dictionary stores temporary spouse of women
     unmatchedMan = set()
     spouseOfWoman = dict()
-    for i in range(len(menPref)):
-        unmatchedMan.add(i)
-        spouseOfWoman[i] = None
+    for key in menPref.keys():
+        unmatchedMan.add(key)
+
+    for key in womenPref.keys():
+        spouseOfWoman[key] = None
 
     while unmatchedMan:
         # Pop a unmatchedman to propose
