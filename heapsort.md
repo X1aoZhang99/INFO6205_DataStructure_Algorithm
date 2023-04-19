@@ -1,7 +1,7 @@
 # **Heap Sort**
 
 
-Heap Sort is an efficient comparison-based sorting algorithm that belongs to the family of selection sorts. In this section, we will dive deep into the inner workings of Heap Sort, exploring its implementation, performance, advantages, and disadvantages. By the end of this guide, you will have a solid understanding of Heap Sort and be equipped to implement it in your projects.
+Heap Sort is an efficient comparison-based sorting algorithm that belongs to the family of selection sorts. In this section, we will dive deep into the inner workings of Heap Sort, exploring its implementation, performance, advantages, and disadvantages. By the end of this section, you will have a solid understanding of Heap Sort and be equipped to implement it in your projects.
 
 ## **Content Table**
 - [**Heap Sort**](#heap-sort)
