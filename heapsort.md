@@ -36,7 +36,10 @@ Heap Sort is an efficient comparison-based sorting algorithm that belongs to the
     - [**2. Java Implementation**](#2-java-implementation)
     - [**3. C++ Implementation**](#3-c-implementation)
   - [**Chapter 8: Summary**](#chapter-8-summary)
-  - [**Chapter 9: Quiz**](#chapter-9-quiz)
+  - [**Chapter 9: Worked Examples**](#chapter-9-worked-examples)
+    - [**Example 1: Max-Heap**](#example-1-max-heap)
+    - [**Example 2: Min-Heap**](#example-2-min-heap)
+  - [**Chapter 10: Quiz**](#chapter-10-quiz)
 
 
 ## **Chapter 1: Introduction to Heap Sort**
@@ -416,7 +419,136 @@ As we conclude our journey, we encourage you to further study and experiment wit
 
 We hope this section has provided you with a solid foundation for understanding Heap Sort and has sparked your interest in exploring other sorting algorithms and data structures.
 
-## **Chapter 9: Quiz**
+## **Chapter 9: Worked Examples**
+
+Consider the following list of numbers: `[9, 3, 5, 1, 7, 6, 8]`. We will construct both a max-heap and a min-heap using these numbers.
+
+### **Example 1: Max-Heap**
+
+1. Insert the first number, `9`. The max-heap has only one node, so it already satisfies the max-heap property.
+```
+    9
+```
+2. Insert the second number, `3`. Since `9 > 3`, the max-heap property is maintained.
+```
+    9
+   /
+  3
+```
+3. Insert the third number, `5`. Since `9 > 5`, the max-heap property is maintained.
+```
+    9
+   / \
+  3   5
+```
+4. Insert the fourth number, `1`. Since `3 > 1`, the max-heap property is maintained.
+```
+    9
+   / \
+  3   5
+ /
+1
+```
+5. Insert the fifth number, `7`. Since `3 < 7`, we need to swap `3` and `7` to maintain the max-heap property.
+```
+    9
+   / \
+  7   5
+ /
+1
+```
+6. Insert the sixth number, `6`. Since `5 < 6`, we need to swap `5` and `6` to maintain the max-heap property.
+```
+    9
+   / \
+  7   6
+ /   /
+1   5
+```
+7. Insert the seventh number, `8`. Since `7 < 8`, we need to swap `7` and `8`. Then, since `9 < 8`, we need to swap `9` and `8` to maintain the max-heap property.
+```
+    9
+   / \
+  8   6
+ /   /
+7   5
+ \
+  1
+```
+8. The final max-heap is:
+```
+    9
+   / \
+  8   6
+ /   /
+7   5
+ \
+  1
+```
+
+### **Example 2: Min-Heap**
+
+1. Insert the first number, `9`. The min-heap has only one node, so it already satisfies the min-heap property.
+```
+    9
+```
+2. Insert the second number, `3`. Since `9 > 3`, we need to swap `9` and `3` to maintain the min-heap property.
+```
+    3
+   /
+  9
+```
+3. Insert the third number, `5`. Since `9 > 5`, the min-heap property is maintained.
+```
+    3
+   / \
+  9   5
+```
+4. Insert the fourth number, `1`. Since `3 > 1`, we need to swap `3` and `1`. Then, since `9 > 1`, we need to swap `9` and `1` to maintain the min-heap property.
+```
+    1
+   / \
+  3   5
+ /
+9
+```
+5. Insert the fifth number, `7`. Since `3 < 7`, the min-heap property is maintained.
+```
+    1
+   / \
+  3   5
+ / \
+9   7
+```
+6. Insert the sixth number, `6`. Since `5 > 6`, the min-heap property is maintained.
+```
+    1
+   / \
+  3   5
+ / \ /
+9   7 6
+```
+7. Insert the seventh number, `8`. Since `3 < 8` and `5 < 8`, the min-heap property is maintained.
+```
+    1
+   / \
+  3   5
+ / \ / \
+9   7 6 8
+```
+
+The final min-heap is:
+```
+    1
+   / \
+  3   5
+ / \ / \
+9   7 6 8
+```
+
+In summary, we have built a max-heap and a min-heap using the given list of numbers. The max-heap has the largest element at the root, while the min-heap has the smallest element at the root.
+
+## **Chapter 10: Quiz**
 
 1. What is a heap data structure, and what are its two main types?
 2. In the context of the Heap Sort algorithm, what is the heap property?
