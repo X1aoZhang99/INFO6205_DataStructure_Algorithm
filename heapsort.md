@@ -526,7 +526,7 @@ Consider the following list of numbers: `[9, 3, 5, 1, 7, 6, 8]`. We will constru
    / \
   3   5
  / \ /
-9   7 6
+9  7 6
 ```
 7. Insert the seventh number, `8`. Since `3 < 8` and `5 < 8`, the min-heap property is maintained.
 ```
@@ -534,7 +534,7 @@ Consider the following list of numbers: `[9, 3, 5, 1, 7, 6, 8]`. We will constru
    / \
   3   5
  / \ / \
-9   7 6 8
+9  7 6  8
 ```
 
 The final min-heap is:
@@ -543,7 +543,7 @@ The final min-heap is:
    / \
   3   5
  / \ / \
-9   7 6 8
+9  7 6  8
 ```
 
 In summary, we have built a max-heap and a min-heap using the given list of numbers. The max-heap has the largest element at the root, while the min-heap has the smallest element at the root.
