@@ -1,6 +1,5 @@
 # **Heap Sort**
 
-
 Heap Sort is an efficient comparison-based sorting algorithm that belongs to the family of selection sorts. In this section, we will dive deep into the inner workings of Heap Sort, exploring its implementation, performance, advantages, and disadvantages. By the end of this section, you will have a solid understanding of Heap Sort and be equipped to implement it in your projects.
 
 ## **Content Table**
@@ -614,3 +613,12 @@ In summary, we have built a max-heap and a min-heap using the given list of numb
     $0\leq$ `k` $\leq 10^4$  
     $0\leq$ `t` $\leq 2^{31} - 1$  
     Hint: You can use a sliding window approach and maintain a data structure like a max-heap or min-heap within the window to efficiently check the conditions for nearby almost duplicate elements.
+
+## **References**
+1. [Heap](https://www.geeksforgeeks.org/heap-data-structure/)
+2. [Heap Sort](https://www.geeksforgeeks.org/heap-sort/)
+3. [Heap Sort](https://www.wikipedia.org/wiki/Heapsort)
+4. [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
+5. [Contains Duplicate III](https://leetcode.com/problems/contains-duplicate-iii/)
+6. [Algorithms Notes for Professionals](https://books.goalkicker.com/AlgorithmsBook/)
+7. [Algorithm Design Kleinberg Tardos](https://www.amazon.com/Algorithm-Design-Jon-Kleinberg/dp/0321295358)
